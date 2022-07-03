@@ -93,7 +93,22 @@ function draw() {
                     location.replace()
                 }
                 if(yPos + bird.height >= cvs.height - fg.height){
-                    location.reload()
+                    Swal.fire({
+                        title:`Cчет: ${score}`,
+                        width: 600,
+                        
+                        padding: '6em',
+                        color: '#000000',
+                        confirmButtonText: 'ИГРАТЬ',
+                        
+                        background: ' url(https://xrest.ru/schemes/00/0b/97/d4/%D0%91%D0%B5%D1%88%D0%B5%D0%BD%D1%8B%D0%B5%20%D0%B2%D0%BE%D1%80%D0%BE%D0%B1%D1%8C%D0%B8-1.jpg)',
+                        backdrop: `rgba(0,0,123,0.4)`
+                    
+                        
+                      }).then(function() {
+                        location.reload()
+                      })
+                    location.replace()
                 }
 
                 if(pipe[i].x == 5){
